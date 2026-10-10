@@ -67,6 +67,7 @@ Apps, agents, and tools for private group messaging with [Marmot](https://github
 
 - [Facet](https://github.com/marmot-protocol/facet) — **adjacent, active** — Nostr-native feature comparison boards.
 - [Goggles](https://github.com/marmot-protocol/goggles) — **adjacent, active** — Forensic audit trace explorer.
+- [Nostream](https://github.com/cameri/nostream) — **adjacent, active** — Nostr relay with Marmot event handling rather than generic storage alone: MIP-00 key packages (443, 10051, 30443), MIP-02 welcomes (444, blocked from direct publishing so they must arrive gift-wrapped), and MIP-03 group events (445) validated to carry the group `h` tag; advertises `supported_mips` in its NIP-11 document.
 
 ## No recent public commits
 
@@ -145,7 +146,7 @@ python3 -m unittest discover -s tests -v
 
 ## Notes
 
-**Checked 2026-10-01.** mdk-odin, MDK's Goose connector, and Scramble's C# library were checked on 2026-10-08; their audit records use that date. Lightning Piggy Mobile and Groundhog were checked on 2026-10-09; the Piggy entry describes an unmerged alpha integration, while Groundhog links its published alpha5 release. Activity is measured at each record's check date, not a maintenance guarantee. Shared repositories use repository-level activity; Mafrend's public activity is store metadata only.
+**Checked 2026-10-01.** mdk-odin, MDK's Goose connector, and Scramble's C# library were checked on 2026-10-08; their audit records use that date. Lightning Piggy Mobile and Groundhog were checked on 2026-10-09; the Piggy entry describes an unmerged alpha integration, while Groundhog links its published alpha5 release. Nostream was checked on 2026-10-10 and its record uses that date. Activity is measured at each record's check date, not a maintenance guarantee. Shared repositories use repository-level activity; Mafrend's public activity is store metadata only.
 
 Versions describe source, not every shipped release or tested compatibility. **Marmot v1 and v2 are not interchangeable.** Package names, app versions, and audit formats are not protocol versions. Alpha and experimental labels describe maturity.
 
