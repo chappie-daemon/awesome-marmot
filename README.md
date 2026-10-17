@@ -18,6 +18,10 @@ Apps, agents, and tools for private group messaging with [Marmot](https://github
 
 ### Apps
 
+- [Nostrautica](https://github.com/jooray/nostrautica) — **v2, active, alpha** — Event-coordination PWA and Android app with Marmot event chats and a coordinator service.
+
+- [ShyChat](https://gitworkshop.dev/npub1mm5l2mfxvg2y7fl7sulfrznhxjqdqxkq72njafp567j6gej8elcsg6qlen/git.shychat.lol/shychat) — **v2, active, alpha** — Browser/PWA messenger with encrypted group chat, media and one-to-one calls; White Noise interoperability remains untested. [Web app](https://shychat.lol/).
+
 - [White Noise for Android](https://github.com/marmot-protocol/whitenoise-android) — **v2, active** — Native Android chat with voice dictation, read-aloud playback, and Amber signer support.
 - [White Noise for iOS](https://github.com/marmot-protocol/whitenoise-ios) — **v2, active** — Native iPhone chat with multiple identities, QR profile sharing, and notifications rendered privately on-device.
 - [White Noise for macOS](https://github.com/marmot-protocol/whitenoise-mac) — **v2, active** — Early native SwiftUI client with a single-window workspace; Apple Silicon and macOS 15.6+ only.
@@ -33,6 +37,8 @@ Apps, agents, and tools for private group messaging with [Marmot](https://github
 
 ### Agents and automation
 
+- [Emissary](https://github.com/modus-lisp/emissary) — **v2, active, experimental** — Research execution agent with optional cl-marmot transport; unpinned dependency and shell-equivalent authority.
+
 - [Marmot for Hermes](https://github.com/marmot-protocol/mdk/tree/master/integrations/hermes/marmot) — **v2, active** — Hermes messaging gateway.
 - [Marmot for OpenClaw](https://github.com/marmot-protocol/mdk/tree/master/integrations/openclaw/marmot) — **v2, active** — OpenClaw channel integration.
 - [wn-codex](https://github.com/marmot-protocol/mdk/tree/master/integrations/codex/marmot) — **v2, active** — Codex terminal connector.
@@ -42,6 +48,12 @@ Apps, agents, and tools for private group messaging with [Marmot](https://github
 - [wn-goose](https://github.com/marmot-protocol/mdk/tree/master/integrations/goose/marmot) — **v2, active** — Goose terminal connector using its headless CLI through `wn-agent`.
 
 ### SDKs and libraries
+
+- [Nostrbase](https://github.com/shroominic/nostrbase) — **v2, active, experimental** — Experimental Nostr record SDK with encrypted shared collections and a Fieldwork example app.
+
+- [quartz-marmot-kmp](https://github.com/kngako/quartz-marmot-kmp) — **v2, active, experimental** — Experimental independent Kotlin MLS/Marmot library; JVM builds, with Android/native and persistence gaps.
+
+- [cl-marmot](https://github.com/modus-lisp/cl-marmot) — **v2, active, experimental** — Common Lisp MLS/Marmot library and CLI; unaudited, with unpinned dependencies.
 
 - [MDK](https://github.com/marmot-protocol/mdk) — **v2, active** — Rust runtime, storage, language bindings, and integrations.
 - [mdk-odin](https://gitworkshop.dev/cyberguy.fyi/relay.ngit.dev/mdk-odin) — **v2, active, experimental** — Native Odin implementation of MDK's MLS and Marmot engine, migrating to MDK 0.12; full compatibility and production readiness are not yet claimed.
@@ -67,7 +79,7 @@ Apps, agents, and tools for private group messaging with [Marmot](https://github
 
 - [Facet](https://github.com/marmot-protocol/facet) — **adjacent, active** — Nostr-native feature comparison boards.
 - [Goggles](https://github.com/marmot-protocol/goggles) — **adjacent, active** — Forensic audit trace explorer.
-- [Nostream](https://github.com/cameri/nostream) — **adjacent, active** — Nostr relay with Marmot event handling rather than generic storage alone: MIP-00 key packages (443, 10051, 30443), MIP-02 welcomes (444, blocked from direct publishing so they must arrive gift-wrapped), and MIP-03 group events (445) validated to carry the group `h` tag; advertises `supported_mips` in its NIP-11 document.
+- [Nostream](https://github.com/cameri/nostream) — **adjacent, active** — Nostr relay with Marmot event handling, group routing-tag validation and relay capability metadata.
 
 ## No recent public commits
 
@@ -152,6 +164,6 @@ Versions describe source, not every shipped release or tested compatibility. **M
 
 Follow each project's installation instructions. Features describe checked source or, for closed-source Mafrend, its publisher's description—not new hands-on tests. This catalog is not a security endorsement.
 
-[Verification evidence](docs/catalog-verification.md) · [Audit snapshot](data/catalog-audit.json) · [Weekly discovery](docs/discovery.md)
+[Dependency research](docs/dependency-research.md) · [Verification evidence](docs/catalog-verification.md) · [Audit snapshot](data/catalog-audit.json) · [Weekly discovery](docs/discovery.md)
 
 ![Catalog checks](https://img.shields.io/github/actions/workflow/status/marmot-protocol/awesome-marmot/ci.yml?label=catalog%20checks)
