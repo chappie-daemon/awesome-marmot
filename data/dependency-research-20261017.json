@@ -1,0 +1,475 @@
+{
+  "checked_at": "2026-10-17T14:22:46.940560+00:00",
+  "scope": "Pinned source and messaging dependencies; no runtime or security certification. Unpinned dependencies remain explicit.",
+  "additions": [
+    {
+      "repository": "https://github.com/modus-lisp/cl-marmot",
+      "default_branch": "master",
+      "commit": "4976cca038fe4ad495f165aaf790e8d7c450ac05",
+      "last_commit_at": "2026-10-14T21:56:24Z",
+      "archived": false,
+      "generation": "v2",
+      "kind": "library-and-cli",
+      "source": "https://github.com/modus-lisp/cl-marmot/tree/4976cca038fe4ad495f165aaf790e8d7c450ac05",
+      "evidence": [
+        "https://github.com/modus-lisp/cl-marmot/blob/4976cca038fe4ad495f165aaf790e8d7c450ac05/cl-marmot.asd",
+        "https://github.com/modus-lisp/cl-marmot/blob/4976cca038fe4ad495f165aaf790e8d7c450ac05/src/marmot/components.lisp",
+        "https://github.com/modus-lisp/cl-marmot/blob/4976cca038fe4ad495f165aaf790e8d7c450ac05/src/marmot/key-packages.lisp",
+        "https://github.com/modus-lisp/cl-marmot/blob/4976cca038fe4ad495f165aaf790e8d7c450ac05/README.md"
+      ],
+      "note": "Independent Common Lisp MLS/Marmot library and CLI; components include account identity proof 0x8009 and encrypted-media-v2. README reports wn interop, not independently run. Dependencies natrium, secp256k1-fast, seal, cl-nostr and bordeaux-threads are ASDF/local siblings, not locked; README mentions cl-nostr marmot-rumors branch. No immutable dependency binding.",
+      "license": "MIT"
+    },
+    {
+      "repository": "https://github.com/modus-lisp/emissary",
+      "default_branch": "master",
+      "commit": "a77eb86bda280712f43c1c56f42e3bff23d5e3b4",
+      "last_commit_at": "2026-10-15T00:24:10Z",
+      "archived": false,
+      "generation": "v2",
+      "kind": "application",
+      "source": "https://github.com/modus-lisp/emissary/tree/a77eb86bda280712f43c1c56f42e3bff23d5e3b4",
+      "evidence": [
+        "https://github.com/modus-lisp/emissary/blob/a77eb86bda280712f43c1c56f42e3bff23d5e3b4/src/marmot.lisp",
+        "https://github.com/modus-lisp/emissary/blob/a77eb86bda280712f43c1c56f42e3bff23d5e3b4/emissary.asd",
+        "https://github.com/modus-lisp/emissary/blob/a77eb86bda280712f43c1c56f42e3bff23d5e3b4/README.md"
+      ],
+      "note": "Authenticated execution agent with optional cl-marmot transport. Concrete attach-marmot invokes CREATE/OPEN-ACCOUNT, PUBLISH-KEY-PACKAGE, ADD-HANDLER, MESSAGE-SENDER, SEND. No version lock for optional cl-marmot: v2 classification is current compatible dependency path, not frozen reproducible installed release. README explicitly new unaudited research software, sandbox is state isolation not capability isolation; principals have shell-equivalent power.",
+      "license": "MIT"
+    },
+    {
+      "repository": "https://github.com/kngako/quartz-marmot-kmp",
+      "default_branch": "marmot-kmp",
+      "commit": "c3783a26b96c7fedbf47a504a8ecf817ffd0d6b9",
+      "last_commit_at": "2026-09-08T07:04:13Z",
+      "archived": false,
+      "generation": "v2",
+      "kind": "library",
+      "source": "https://github.com/kngako/quartz-marmot-kmp/tree/c3783a26b96c7fedbf47a504a8ecf817ffd0d6b9",
+      "evidence": [
+        "https://github.com/kngako/quartz-marmot-kmp/blob/c3783a26b96c7fedbf47a504a8ecf817ffd0d6b9/README.md",
+        "https://github.com/kngako/quartz-marmot-kmp/blob/c3783a26b96c7fedbf47a504a8ecf817ffd0d6b9/library/build.gradle.kts",
+        "https://github.com/kngako/quartz-marmot-kmp/blob/c3783a26b96c7fedbf47a504a8ecf817ffd0d6b9/gradle/libs.versions.toml",
+        "https://github.com/kngako/quartz-marmot-kmp/blob/c3783a26b96c7fedbf47a504a8ecf817ffd0d6b9/library/src/commonMain/kotlin/com/vitorpamplona/quartz/marmot/v2/mls/appdata/ComponentIds.kt"
+      ],
+      "note": "Independent adopted component-based protocol; directory v2 alone is NOT evidence (README says fork marker). Actual 0x8009 proof, app_data_dictionary/app_components and component IDs support v2. Quartz event dependency com.vitorpamplona.quartz:quartz:1.14.0; own MLS stack not inherited Quartz MLS. README says only JVM builds; Android/native targets broken, not Maven published, known convergence/restart/persistence gaps. Reported398 tests not independently executed.",
+      "license": "Apache-2.0"
+    },
+    {
+      "repository": "https://github.com/jooray/nostrautica",
+      "default_branch": "main",
+      "commit": "b2205c348e5368c308b2ff2064361f104cd1053d",
+      "last_commit_at": "2026-10-11T21:45:47Z",
+      "archived": false,
+      "checked_at": "2026-10-17T14:21:53.139404+00:00",
+      "source": "https://github.com/jooray/nostrautica/tree/b2205c348e5368c308b2ff2064361f104cd1053d",
+      "activity": "active",
+      "runtime_tested": false,
+      "generation": "v2",
+      "kind": "application",
+      "name": "Nostrautica",
+      "note": "Nostr event-coordination PWA and native Android app with coordinator-managed Marmot event chat. Experimental; interoperability claims in its docs were not independently exercised.",
+      "dependency_chain": {
+        "app_and_coordinator": "workspace marmot-ts -> committed fork0ab8336aea322dba8b4fa57697e9cdf686292a9b -> bundled ts-mls af6d1c599f2912fda5fbcac1b461fdd3013e37c7",
+        "android": "MarmotKit0.12.0 release zip with pinned sha256 a7ae4213d1e331d17148589f7190f30b0cefef20952f46b19938524577bbbb18",
+        "v2_proof": "Actual vendored lib/core/key-package.js generates0x8009 account identity proof; docs explicitly describe current profile and retired legacy0xF2F1 fixtures.",
+        "android_release_commit": "122bd90ffac60bb6311346e228d0f609a18521ee",
+        "android_release_generation_evidence": [
+          "https://github.com/marmot-protocol/mdk/blob/122bd90ffac60bb6311346e228d0f609a18521ee/crates/cgka-engine/src/account_identity_proof.rs",
+          "https://github.com/marmot-protocol/mdk/blob/122bd90ffac60bb6311346e228d0f609a18521ee/crates/cgka-engine/src/app_components.rs",
+          "https://github.com/marmot-protocol/mdk/blob/122bd90ffac60bb6311346e228d0f609a18521ee/crates/traits/src/app_components/profile.rs"
+        ]
+      },
+      "evidence": [
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/README.md",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/packages/app/package.json",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/packages/coordinator/package.json",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/pnpm-lock.yaml",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/packages/vendor/marmot-ts/package.json",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/packages/vendor/marmot-ts/lib/core/key-package.js",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/packages/coordinator/src/chat/mls.ts",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/android/tools/marmotkit/fetch.sh",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/android/tools/marmotkit/marmotkit-0.12.0.sha256",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/android/app/src/main/java/today/cypherpunk/nostrautica/domain/chat/MarmotEngine.kt",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/docs/MARMOT-GROUP-CHAT.md"
+      ]
+    },
+    {
+      "repository": "https://github.com/shroominic/nostrbase",
+      "default_branch": "main",
+      "commit": "c3cd7609edc455d293f877c581041b0a20edef4f",
+      "last_commit_at": "2026-10-06T08:08:29Z",
+      "archived": false,
+      "checked_at": "2026-10-17T14:21:53.139445+00:00",
+      "source": "https://github.com/shroominic/nostrbase/tree/c3cd7609edc455d293f877c581041b0a20edef4f",
+      "activity": "active",
+      "runtime_tested": false,
+      "generation": "v2",
+      "kind": "library-with-example",
+      "name": "Nostrbase",
+      "note": "Supabase-style Nostr record SDK; experimental encrypted shared collections via Marmot, with Fieldwork demo. No independent audit or released White Noise interoperability established.",
+      "dependency_chain": {
+        "engine": "file vendor/internet-privacy-marmot-ts-0.6.0-nostrbase.2.tgz, upstream591eb25f6ba0b69cb6dc7b711fb75836da7ddbaa plus two documented local patches",
+        "mls": "vendored forkaf6d1c599f2912fda5fbcac1b461fdd3013e37c7",
+        "artifact_sha256": "32517f50ced5ea88964d38be6f03e2001550ff1948fbcead8d585fa16a14f0e0",
+        "v2_proof": "Downloaded tar in memory, verified SHA256; dist/core/key-package.js creates0x8009, imports bundled ts-mls; actual src/groups.ts instantiates MarmotClient."
+      },
+      "evidence": [
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/README.md",
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/package.json",
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/package-lock.json",
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/src/groups.ts",
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/docs/groups.md",
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/vendor/README.md",
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/vendor/internet-privacy-marmot-ts-0.6.0-nostrbase.2.tgz",
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/examples/fieldwork/package.json"
+      ]
+    }
+  ],
+  "excluded_from_v2": [
+    {
+      "repository": "https://github.com/SovranBitcoin/Sovran",
+      "default_branch": "main",
+      "commit": "28adc886a288b667938ac12abd855ef7846acec3",
+      "last_commit_at": "2026-10-17T05:36:38Z",
+      "archived": false,
+      "checked_at": "2026-10-17T14:21:53.139436+00:00",
+      "source": "https://github.com/SovranBitcoin/Sovran/tree/28adc886a288b667938ac12abd855ef7846acec3",
+      "activity": "active",
+      "runtime_tested": false,
+      "generation": "legacy-not-v2",
+      "kind": "application",
+      "name": "Sovran",
+      "recommendation": "exclude from v2 additions",
+      "note": "React Native Bitcoin wallet; dependency exists but current vendored engine is old dist MIP profile. App use was not traced fully; do not claim v2 support.",
+      "dependency_chain": {
+        "engine": "file app/vendor/marmot-ts; old package exports dist, standalone registry ts-mls2.0.0-rc.7",
+        "lock": "bun.lock file dependency plus ts-mls2.0.0-rc.7 and @hpke/core1.7.5"
+      },
+      "evidence": [
+        "https://github.com/SovranBitcoin/Sovran/blob/28adc886a288b667938ac12abd855ef7846acec3/README.md",
+        "https://github.com/SovranBitcoin/Sovran/blob/28adc886a288b667938ac12abd855ef7846acec3/app/package.json",
+        "https://github.com/SovranBitcoin/Sovran/blob/28adc886a288b667938ac12abd855ef7846acec3/app/vendor/marmot-ts/package.json",
+        "https://github.com/SovranBitcoin/Sovran/blob/28adc886a288b667938ac12abd855ef7846acec3/app/vendor/marmot-ts/dist/core/protocol.js",
+        "https://github.com/SovranBitcoin/Sovran/blob/28adc886a288b667938ac12abd855ef7846acec3/bun.lock"
+      ]
+    },
+    {
+      "repository": "https://github.com/sedecim-com/nostr",
+      "default_branch": "main",
+      "commit": "1efcb156decf19edcee25d4eeaee536272cc3e0a",
+      "last_commit_at": "2026-10-01T02:15:54Z",
+      "archived": false,
+      "checked_at": "2026-10-17T14:21:53.139453+00:00",
+      "source": "https://github.com/sedecim-com/nostr/tree/1efcb156decf19edcee25d4eeaee536272cc3e0a",
+      "activity": "active",
+      "runtime_tested": false,
+      "generation": "legacy-not-v2",
+      "kind": "application-monorepo",
+      "name": "Sedecim",
+      "recommendation": "exclude from v2 additions",
+      "note": "Real source UI and provider adapter, but MIP media v2 is NOT Marmot protocol v2; provider pins deprecated marmot-ts0.5.1, types include10051 legacy relay discovery.",
+      "dependency_chain": {
+        "engine": "@internet-privacy/marmot-ts0.5.1 -> ts-mls2.0.0-rc.16 override",
+        "usage": "apps/web-saas/src/lib/groups.ts -> MarmotTsProvider"
+      },
+      "evidence": [
+        "https://github.com/sedecim-com/nostr/blob/1efcb156decf19edcee25d4eeaee536272cc3e0a/packages/marmot-adapter/package.json",
+        "https://github.com/sedecim-com/nostr/blob/1efcb156decf19edcee25d4eeaee536272cc3e0a/package-lock.json",
+        "https://github.com/sedecim-com/nostr/blob/1efcb156decf19edcee25d4eeaee536272cc3e0a/packages/marmot-adapter/src/types.ts",
+        "https://github.com/sedecim-com/nostr/blob/1efcb156decf19edcee25d4eeaee536272cc3e0a/packages/marmot-adapter/src/marmot-ts.ts",
+        "https://github.com/sedecim-com/nostr/blob/1efcb156decf19edcee25d4eeaee536272cc3e0a/apps/web-saas/src/lib/groups.ts",
+        "https://github.com/sedecim-com/nostr/blob/1efcb156decf19edcee25d4eeaee536272cc3e0a/docs/marmot.md"
+      ]
+    },
+    {
+      "repository": "https://github.com/squip/hyperpipe",
+      "default_branch": "main",
+      "commit": "859c3bb1f81c9e669fc513b93e792c83630ab88c",
+      "last_commit_at": "2026-04-20T21:19:11Z",
+      "archived": false,
+      "checked_at": "2026-10-17T14:21:53.139459+00:00",
+      "source": "https://github.com/squip/hyperpipe/tree/859c3bb1f81c9e669fc513b93e792c83630ab88c",
+      "activity": "inactive",
+      "runtime_tested": false,
+      "generation": "legacy-not-v2",
+      "kind": "application",
+      "name": "Hyperpipe",
+      "recommendation": "exclude from v2 additions",
+      "note": "Desktop/TUI modular chat application, inactive >90days; real MarmotService but old0.4.0 npm engine.",
+      "dependency_chain": {
+        "engine": "marmot-ts alias npm:@internet-privacy/marmot-ts@0.4.0 -> ts-mls2.0.0-rc.7",
+        "lock": "package-lock.json pins both"
+      },
+      "evidence": [
+        "https://github.com/squip/hyperpipe/blob/859c3bb1f81c9e669fc513b93e792c83630ab88c/README.md",
+        "https://github.com/squip/hyperpipe/blob/859c3bb1f81c9e669fc513b93e792c83630ab88c/hyperpipe-core/package.json",
+        "https://github.com/squip/hyperpipe/blob/859c3bb1f81c9e669fc513b93e792c83630ab88c/package-lock.json",
+        "https://github.com/squip/hyperpipe/blob/859c3bb1f81c9e669fc513b93e792c83630ab88c/hyperpipe-core/marmot-service.mjs"
+      ]
+    },
+    {
+      "repository": "https://github.com/codeswot/marmot_dart",
+      "default_branch": "main",
+      "commit": "ef6f0088cc96246d6d1daae106490e5025f49be1",
+      "last_commit_at": "2026-07-19T06:39:28Z",
+      "archived": false,
+      "generation": "v1",
+      "kind": "library",
+      "source": "https://github.com/codeswot/marmot_dart/tree/ef6f0088cc96246d6d1daae106490e5025f49be1",
+      "evidence": [
+        "https://github.com/codeswot/marmot_dart/blob/ef6f0088cc96246d6d1daae106490e5025f49be1/rust/Cargo.toml",
+        "https://github.com/codeswot/marmot_dart/blob/ef6f0088cc96246d6d1daae106490e5025f49be1/rust/Cargo.lock",
+        "https://github.com/codeswot/marmot_dart/blob/ef6f0088cc96246d6d1daae106490e5025f49be1/README.md"
+      ],
+      "note": "Registry MDK0.8.0 and default mip04 feature. Downloaded exact mdk-core0.8.0 source documents monolithic MIP-01 NostrGroupDataExtension; not adopted v2. Current Git source plus hosted package0.0.8 rust manifest/lock inspected. Dart FFI API over MDK, not independent protocol.",
+      "license": "MIT",
+      "resolved_dependencies": [
+        {
+          "name": "marmot_dart",
+          "version": "0.1.0",
+          "source": null,
+          "checksum": null
+        },
+        {
+          "name": "mdk-core",
+          "version": "0.8.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "bce37d3705644198b5d4d0ba171fa5cb803f7cc7b486c38ff2b86010414d98ef"
+        },
+        {
+          "name": "mdk-macros",
+          "version": "0.8.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "16d1dc36bd628c20e171926e03034d2bee55a210c7f0bf006180bb33229aa98b"
+        },
+        {
+          "name": "mdk-memory-storage",
+          "version": "0.8.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "66cf685d2eefc45e37b2fd739beb0419fcc58a229a53c096090010f86bc66c12"
+        },
+        {
+          "name": "mdk-sqlite-storage",
+          "version": "0.8.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "865eeb78d12a90d53aaabd8f2b1dba97893e82b67f13bd6d8a2693092813528d"
+        },
+        {
+          "name": "mdk-storage-traits",
+          "version": "0.8.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "99e1d9ab3deeabe388d49c32cc9c275707ca646aa3d0e694d55f2a659b8b42d9"
+        },
+        {
+          "name": "openmls",
+          "version": "0.8.1",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "dcb512bfe6a55777518853ea535c6241f069cb0e8984678c117151d2a1e7e903"
+        },
+        {
+          "name": "openmls_basic_credential",
+          "version": "0.5.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "983e8be1457dd6f316f409292cec334af3b57b49a19deadc925c83c3c35e15b6"
+        },
+        {
+          "name": "openmls_memory_storage",
+          "version": "0.5.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "1a52c927ddb9940acb96d51aebd54b8b9c601c7119e6609622fb3f2cbe16abe3"
+        },
+        {
+          "name": "openmls_rust_crypto",
+          "version": "0.5.1",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "fafcc8a3552b10fbb3ab757cccaf1a34081e826ca819f49aa7e6645b1d95c00f"
+        },
+        {
+          "name": "openmls_traits",
+          "version": "0.5.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "4f88ccdd53448dfdbfa5b8da8ba4e527c418fdb966418172bace2e3b41eedd56"
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/codeswot/ZapBook",
+      "default_branch": "main",
+      "commit": "ddbd4814f0b16b1ea621df99c027314c969b1333",
+      "last_commit_at": "2026-08-08T09:00:52Z",
+      "archived": false,
+      "generation": "v1",
+      "kind": "application",
+      "source": "https://github.com/codeswot/ZapBook/tree/ddbd4814f0b16b1ea621df99c027314c969b1333",
+      "evidence": [
+        "https://github.com/codeswot/ZapBook/blob/ddbd4814f0b16b1ea621df99c027314c969b1333/pubspec.yaml",
+        "https://github.com/codeswot/ZapBook/blob/ddbd4814f0b16b1ea621df99c027314c969b1333/pubspec.lock",
+        "https://github.com/codeswot/ZapBook/blob/ddbd4814f0b16b1ea621df99c027314c969b1333/lib/core/di/marmot_module.dart",
+        "https://github.com/codeswot/ZapBook/blob/ddbd4814f0b16b1ea621df99c027314c969b1333/README.md"
+      ],
+      "note": "Flutter library/book app. pubspec marmot_dart^0.0.8 locks hosted0.0.8 SHA256ce868adef11eb6d96730cc15b503f3816eff7efc1c96b1b58a97b173353c98c8. Downloaded exact pub archive contains MDK0.8.0 registry source/lock and mip04, so no v2 upgrade inferred from latest Git source.",
+      "license": "AGPL-3.0"
+    },
+    {
+      "repository": "https://github.com/pablof7z/chirp",
+      "default_branch": "master",
+      "commit": "e8b11748e910149c7c73111471e15c3d02c4b777",
+      "last_commit_at": "2026-07-06T09:28:17Z",
+      "archived": false,
+      "generation": "v1",
+      "kind": "application",
+      "source": "https://github.com/pablof7z/chirp/tree/e8b11748e910149c7c73111471e15c3d02c4b777",
+      "evidence": [
+        "https://github.com/pablof7z/chirp/blob/e8b11748e910149c7c73111471e15c3d02c4b777/Cargo.toml",
+        "https://github.com/pablof7z/chirp/blob/e8b11748e910149c7c73111471e15c3d02c4b777/Cargo.lock",
+        "https://github.com/pablof7z/chirp/blob/e8b11748e910149c7c73111471e15c3d02c4b777/crates/nmp-app-chirp/Cargo.toml",
+        "https://github.com/pablof7z/chirp/blob/e8b11748e910149c7c73111471e15c3d02c4b777/crates/nmp-app-chirp/src/marmot_runtime.rs"
+      ],
+      "note": "Marmot runtime explicitly installs nmp_marmot and optional feature. Cargo pins nmp-marmot to nostr-multi-platform bc6b42592d7fd61bc6767cac246a24a6b23bf8e3; exact upstream crates/nmp-marmot/Cargo.toml and Chirp lock resolve mdk-core0.8.0, OpenMLS0.8.1. Multi-platform Nostr app with actual group runtime, but MIP-era/v1, not v2.",
+      "license": null,
+      "resolved_dependencies": [
+        {
+          "name": "mdk-core",
+          "version": "0.8.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "bce37d3705644198b5d4d0ba171fa5cb803f7cc7b486c38ff2b86010414d98ef"
+        },
+        {
+          "name": "mdk-macros",
+          "version": "0.8.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "16d1dc36bd628c20e171926e03034d2bee55a210c7f0bf006180bb33229aa98b"
+        },
+        {
+          "name": "mdk-sqlite-storage",
+          "version": "0.8.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "865eeb78d12a90d53aaabd8f2b1dba97893e82b67f13bd6d8a2693092813528d"
+        },
+        {
+          "name": "mdk-storage-traits",
+          "version": "0.8.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "99e1d9ab3deeabe388d49c32cc9c275707ca646aa3d0e694d55f2a659b8b42d9"
+        },
+        {
+          "name": "nmp-marmot",
+          "version": "1.0.0-rc.1",
+          "source": "git+https://github.com/pablof7z/nostr-multi-platform?rev=bc6b42592d7fd61bc6767cac246a24a6b23bf8e3#bc6b42592d7fd61bc6767cac246a24a6b23bf8e3",
+          "checksum": null
+        },
+        {
+          "name": "openmls",
+          "version": "0.8.1",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "dcb512bfe6a55777518853ea535c6241f069cb0e8984678c117151d2a1e7e903"
+        },
+        {
+          "name": "openmls_basic_credential",
+          "version": "0.5.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "983e8be1457dd6f316f409292cec334af3b57b49a19deadc925c83c3c35e15b6"
+        },
+        {
+          "name": "openmls_memory_storage",
+          "version": "0.5.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "1a52c927ddb9940acb96d51aebd54b8b9c601c7119e6609622fb3f2cbe16abe3"
+        },
+        {
+          "name": "openmls_rust_crypto",
+          "version": "0.5.1",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "fafcc8a3552b10fbb3ab757cccaf1a34081e826ca819f49aa7e6645b1d95c00f"
+        },
+        {
+          "name": "openmls_traits",
+          "version": "0.5.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "4f88ccdd53448dfdbfa5b8da8ba4e527c418fdb966418172bace2e3b41eedd56"
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/futpib/filestr",
+      "default_branch": "master",
+      "commit": "1ad4632ce21fce24a886e6bd2b757339eb134632",
+      "last_commit_at": "2026-06-14T14:44:28Z",
+      "archived": false,
+      "generation": "v1",
+      "kind": "application",
+      "source": "https://github.com/futpib/filestr/tree/1ad4632ce21fce24a886e6bd2b757339eb134632",
+      "evidence": [
+        "https://github.com/futpib/filestr/blob/1ad4632ce21fce24a886e6bd2b757339eb134632/filestr-chat/Cargo.toml",
+        "https://github.com/futpib/filestr/blob/1ad4632ce21fce24a886e6bd2b757339eb134632/Cargo.lock",
+        "https://github.com/futpib/filestr/blob/1ad4632ce21fce24a886e6bd2b757339eb134632/filestr-chat/src/mls.rs",
+        "https://github.com/futpib/filestr/blob/1ad4632ce21fce24a886e6bd2b757339eb134632/README.md"
+      ],
+      "note": "Friend-to-friend file sharing with actual MDK group hubs chat plane enabled by default daemon chat feature; registry mdk-core0.8.0 plus OpenMLS0.8.1 lock. MIP-era/v1. Android Flutter front-end is files-only/iroh-only: do not claim Android Marmot messaging. No interop verified.",
+      "license": null,
+      "resolved_dependencies": [
+        {
+          "name": "mdk-core",
+          "version": "0.8.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "bce37d3705644198b5d4d0ba171fa5cb803f7cc7b486c38ff2b86010414d98ef"
+        },
+        {
+          "name": "mdk-macros",
+          "version": "0.8.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "16d1dc36bd628c20e171926e03034d2bee55a210c7f0bf006180bb33229aa98b"
+        },
+        {
+          "name": "mdk-memory-storage",
+          "version": "0.8.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "66cf685d2eefc45e37b2fd739beb0419fcc58a229a53c096090010f86bc66c12"
+        },
+        {
+          "name": "mdk-sqlite-storage",
+          "version": "0.8.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "865eeb78d12a90d53aaabd8f2b1dba97893e82b67f13bd6d8a2693092813528d"
+        },
+        {
+          "name": "mdk-storage-traits",
+          "version": "0.8.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "99e1d9ab3deeabe388d49c32cc9c275707ca646aa3d0e694d55f2a659b8b42d9"
+        },
+        {
+          "name": "openmls",
+          "version": "0.8.1",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "dcb512bfe6a55777518853ea535c6241f069cb0e8984678c117151d2a1e7e903"
+        },
+        {
+          "name": "openmls_basic_credential",
+          "version": "0.5.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "983e8be1457dd6f316f409292cec334af3b57b49a19deadc925c83c3c35e15b6"
+        },
+        {
+          "name": "openmls_memory_storage",
+          "version": "0.5.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "1a52c927ddb9940acb96d51aebd54b8b9c601c7119e6609622fb3f2cbe16abe3"
+        },
+        {
+          "name": "openmls_rust_crypto",
+          "version": "0.5.1",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "fafcc8a3552b10fbb3ab757cccaf1a34081e826ca819f49aa7e6645b1d95c00f"
+        },
+        {
+          "name": "openmls_traits",
+          "version": "0.5.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "4f88ccdd53448dfdbfa5b8da8ba4e527c418fdb966418172bace2e3b41eedd56"
+        }
+      ]
+    }
+  ]
+}

@@ -729,6 +729,121 @@
       "feature_evidence": [
         "https://gitworkshop.dev/npub1mm5l2mfxvg2y7fl7sulfrznhxjqdqxkq72njafp567j6gej8elcsg6qlen/git.shychat.lol/shychat/tree/34a3418978fd2dc563be9beb72bbf38ef6ed3cb0/README.md"
       ]
+    },
+    {
+      "repository": "https://github.com/modus-lisp/cl-marmot",
+      "default_branch": "master",
+      "commit": "4976cca038fe4ad495f165aaf790e8d7c450ac05",
+      "last_commit_at": "2026-10-14T21:56:24Z",
+      "archived": false,
+      "source": "https://github.com/modus-lisp/cl-marmot/tree/4976cca038fe4ad495f165aaf790e8d7c450ac05",
+      "note": "Independent Common Lisp MLS/Marmot library and CLI; components include account identity proof 0x8009 and encrypted-media-v2. README reports wn interop, not independently run. Dependencies natrium, secp256k1-fast, seal, cl-nostr and bordeaux-threads are ASDF/local siblings, not locked; README mentions cl-nostr marmot-rumors branch. No immutable dependency binding.",
+      "generation": "v2",
+      "activity": "active",
+      "checked_at": "2026-10-17T14:21:18.003145+00:00",
+      "generation_evidence": [
+        "https://github.com/modus-lisp/cl-marmot/blob/4976cca038fe4ad495f165aaf790e8d7c450ac05/cl-marmot.asd",
+        "https://github.com/modus-lisp/cl-marmot/blob/4976cca038fe4ad495f165aaf790e8d7c450ac05/src/marmot/components.lisp",
+        "https://github.com/modus-lisp/cl-marmot/blob/4976cca038fe4ad495f165aaf790e8d7c450ac05/src/marmot/key-packages.lisp",
+        "https://github.com/modus-lisp/cl-marmot/blob/4976cca038fe4ad495f165aaf790e8d7c450ac05/README.md"
+      ],
+      "feature_evidence": [
+        "https://github.com/modus-lisp/cl-marmot/blob/4976cca038fe4ad495f165aaf790e8d7c450ac05/README.md"
+      ]
+    },
+    {
+      "repository": "https://github.com/modus-lisp/emissary",
+      "default_branch": "master",
+      "commit": "a77eb86bda280712f43c1c56f42e3bff23d5e3b4",
+      "last_commit_at": "2026-10-15T00:24:10Z",
+      "archived": false,
+      "source": "https://github.com/modus-lisp/emissary/tree/a77eb86bda280712f43c1c56f42e3bff23d5e3b4",
+      "note": "Authenticated execution agent with optional cl-marmot transport. Concrete attach-marmot invokes CREATE/OPEN-ACCOUNT, PUBLISH-KEY-PACKAGE, ADD-HANDLER, MESSAGE-SENDER, SEND. No version lock for optional cl-marmot: v2 classification is current compatible dependency path, not frozen reproducible installed release. README explicitly new unaudited research software, sandbox is state isolation not capability isolation; principals have shell-equivalent power.",
+      "generation": "v2",
+      "activity": "active",
+      "checked_at": "2026-10-17T14:21:18.003145+00:00",
+      "generation_evidence": [
+        "https://github.com/modus-lisp/emissary/blob/a77eb86bda280712f43c1c56f42e3bff23d5e3b4/src/marmot.lisp",
+        "https://github.com/modus-lisp/emissary/blob/a77eb86bda280712f43c1c56f42e3bff23d5e3b4/emissary.asd",
+        "https://github.com/modus-lisp/emissary/blob/a77eb86bda280712f43c1c56f42e3bff23d5e3b4/README.md"
+      ],
+      "feature_evidence": [
+        "https://github.com/modus-lisp/emissary/blob/a77eb86bda280712f43c1c56f42e3bff23d5e3b4/README.md"
+      ]
+    },
+    {
+      "repository": "https://github.com/kngako/quartz-marmot-kmp",
+      "default_branch": "marmot-kmp",
+      "commit": "c3783a26b96c7fedbf47a504a8ecf817ffd0d6b9",
+      "last_commit_at": "2026-09-08T07:04:13Z",
+      "archived": false,
+      "source": "https://github.com/kngako/quartz-marmot-kmp/tree/c3783a26b96c7fedbf47a504a8ecf817ffd0d6b9",
+      "note": "Independent adopted component-based protocol; directory v2 alone is NOT evidence (README says fork marker). Actual 0x8009 proof, app_data_dictionary/app_components and component IDs support v2. Quartz event dependency com.vitorpamplona.quartz:quartz:1.14.0; own MLS stack not inherited Quartz MLS. README says only JVM builds; Android/native targets broken, not Maven published, known convergence/restart/persistence gaps. Reported398 tests not independently executed.",
+      "generation": "v2",
+      "activity": "active",
+      "checked_at": "2026-10-17T14:21:18.003145+00:00",
+      "generation_evidence": [
+        "https://github.com/kngako/quartz-marmot-kmp/blob/c3783a26b96c7fedbf47a504a8ecf817ffd0d6b9/README.md",
+        "https://github.com/kngako/quartz-marmot-kmp/blob/c3783a26b96c7fedbf47a504a8ecf817ffd0d6b9/library/build.gradle.kts",
+        "https://github.com/kngako/quartz-marmot-kmp/blob/c3783a26b96c7fedbf47a504a8ecf817ffd0d6b9/gradle/libs.versions.toml",
+        "https://github.com/kngako/quartz-marmot-kmp/blob/c3783a26b96c7fedbf47a504a8ecf817ffd0d6b9/library/src/commonMain/kotlin/com/vitorpamplona/quartz/marmot/v2/mls/appdata/ComponentIds.kt"
+      ],
+      "feature_evidence": [
+        "https://github.com/kngako/quartz-marmot-kmp/blob/c3783a26b96c7fedbf47a504a8ecf817ffd0d6b9/README.md"
+      ]
+    },
+    {
+      "repository": "https://github.com/jooray/nostrautica",
+      "default_branch": "main",
+      "commit": "b2205c348e5368c308b2ff2064361f104cd1053d",
+      "last_commit_at": "2026-10-11T21:45:47Z",
+      "archived": false,
+      "source": "https://github.com/jooray/nostrautica/tree/b2205c348e5368c308b2ff2064361f104cd1053d",
+      "note": "Nostr event-coordination PWA and native Android app with coordinator-managed Marmot event chat. Experimental; interoperability claims in its docs were not independently exercised.",
+      "generation": "v2",
+      "activity": "active",
+      "checked_at": "2026-10-17T14:21:53.139404+00:00",
+      "generation_evidence": [
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/README.md",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/packages/app/package.json",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/packages/coordinator/package.json",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/pnpm-lock.yaml",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/packages/vendor/marmot-ts/package.json",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/packages/vendor/marmot-ts/lib/core/key-package.js",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/packages/coordinator/src/chat/mls.ts",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/android/tools/marmotkit/fetch.sh",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/android/tools/marmotkit/marmotkit-0.12.0.sha256",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/android/app/src/main/java/today/cypherpunk/nostrautica/domain/chat/MarmotEngine.kt",
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/docs/MARMOT-GROUP-CHAT.md"
+      ],
+      "feature_evidence": [
+        "https://github.com/jooray/nostrautica/blob/b2205c348e5368c308b2ff2064361f104cd1053d/README.md"
+      ]
+    },
+    {
+      "repository": "https://github.com/shroominic/nostrbase",
+      "default_branch": "main",
+      "commit": "c3cd7609edc455d293f877c581041b0a20edef4f",
+      "last_commit_at": "2026-10-06T08:08:29Z",
+      "archived": false,
+      "source": "https://github.com/shroominic/nostrbase/tree/c3cd7609edc455d293f877c581041b0a20edef4f",
+      "note": "Supabase-style Nostr record SDK; experimental encrypted shared collections via Marmot, with Fieldwork demo. No independent audit or released White Noise interoperability established.",
+      "generation": "v2",
+      "activity": "active",
+      "checked_at": "2026-10-17T14:21:53.139445+00:00",
+      "generation_evidence": [
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/README.md",
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/package.json",
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/package-lock.json",
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/src/groups.ts",
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/docs/groups.md",
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/vendor/README.md",
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/vendor/internet-privacy-marmot-ts-0.6.0-nostrbase.2.tgz",
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/examples/fieldwork/package.json"
+      ],
+      "feature_evidence": [
+        "https://github.com/shroominic/nostrbase/blob/c3cd7609edc455d293f877c581041b0a20edef4f/README.md"
+      ]
     }
   ],
   "removed_repositories": [
